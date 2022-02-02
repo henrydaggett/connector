@@ -1,0 +1,17 @@
+[
+  {
+    "cardTitle": "Title one",
+    "cardDescription": "Some example description text one",
+    "cardImageURL": "https://photos5.appleinsider.com/gallery/29370-47319-000-3x2-Apple-History-Mac-launch-l.jpg"
+  },
+  {
+    "cardTitle": "Title two",
+    "cardDescription": "Some example description text two",
+    "cardImageURL": "https://photos5.appleinsider.com/gallery/29370-47319-000-3x2-Apple-History-Mac-launch-l.jpg"
+  },
+  {
+    "cardTitle": "Title three",
+    "cardDescription": "Some example description text three",
+    "cardImageURL": "https://photos5.appleinsider.com/gallery/29370-47319-000-3x2-Apple-History-Mac-launch-l.jpg"
+  }
+]

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connector</title>
+</head>
+<body>
+
+  <style>
+    * {
+      font-family: sans-serif;
+    }
+  </style>
+
+  <textarea name="JSONinput" id="JSONinput" cols="150" rows="20">[
+  {
+  "cardTitle": "Title one",
+  "cardDescription": "Some example description text one",
+  "cardImageURL": "https://photos5.appleinsider.com/gallery/29370-47319-000-3x2-Apple-History-Mac-launch-l.jpg"
+  },
+  {
+  "cardTitle": "Title two",
+  "cardDescription": "Some example description text two",
+  "cardImageURL": "https://photos5.appleinsider.com/gallery/29370-47319-000-3x2-Apple-History-Mac-launch-l.jpg"
+  },
+  {
+  "cardTitle": "Title three",
+  "cardDescription": "Some example description text three",
+  "cardImageURL": "https://photos5.appleinsider.com/gallery/29370-47319-000-3x2-Apple-History-Mac-launch-l.jpg"
+  }
+  ]</textarea>
+
+  <br>
+  <h4>Number of items:</h4>
+  <h1 id="arrayLength"></h1>
+  <br>
+  <h4>Data Fields:</h4>
+  <div id="fields"></div>
+
+  <script>
+    const arrayLength = document.getElementById('arrayLength')
+    const fields = document.getElementById('fields')
+
+    let textAreaValue = document.getElementById('JSONinput').value
+    let theJSON = JSON.parse(textAreaValue)
+    let dataFields = Object.keys(theJSON[0])
+
+    arrayLength.innerText = theJSON.length
+
+    let dataFieldsHTML = dataFields.map(field => {
+      const p = document.createElement('p')
+      p.textContent = field
+      fields.appendChild(p)
+    })
+  </script>
+  
+</body>
+</html>
